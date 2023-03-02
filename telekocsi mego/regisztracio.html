@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telekocsi</title>
+    <link rel="stylesheet" href="telekocsi.css">
+    <script>
+        function regiszt(form) {
+            let pw1 = form.pw1.value;
+            let pw2 = form.pw2.value;
+            if (pw1 != pw2) {
+                alert("A két jelszó nem egyezik!");
+                return false;
+            }
+            else {
+                { alert("A regisztráció sikeres!") }
+                return true
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="tartalom">
+        <h1>Telekocsi</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="telekocsi.html">Bemutatkozás<a></li>
+                <li>Sofőröknek</li>
+                <li>Utasoknak</li>
+                <li>Bejelentkezés</li>
+                <li>Regisztráció</li>
+            </ul>
+        </div>
+        <h2>Regisztráció</h2>
+        <form onsubmit="return regiszt(this)">
+            <table>
+                <tr>
+                    <td>Név:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>E-mail cím:</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Jelszó:</td>
+                    <td><input type="password" name="pw1"></td>
+                </tr>
+                <tr>
+                    <td>Jelszó ismét:</td>
+                    <td><input type="password" name="pw2"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Mentés"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
